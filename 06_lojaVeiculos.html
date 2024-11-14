@@ -7,7 +7,8 @@
     let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
     let carrosHatch = ["308", "Focus", "i30"];
     
-    Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
+    Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o 
+    tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
 
     Apresente a lista final de cada tipo de veículo.
     */
@@ -21,45 +22,89 @@
     const adicione1 = prompt(`DIGITE UM VEÍCULO PARA SER INSERIDO EM UMA DAS LISTAS:
     \nSUV = ${carrosSUV.join(" - ")}
     \nSEDAN = ${carrosSedan.join(" - ")}
-    \nHATCH = ${carrosHatch.join(" - ")}.`);  
+    \nHATCH = ${carrosHatch.join(" - ")}.`);
+
+    const tipo1 = prompt(`DIGITE O TIPO DE VEÍCULO QUE DESEJA INSERIR: \n-SUV
+    \n-SEDAN
+    \n-HATCH.`).toUpperCase();
+
+
     const adicione2 = prompt(`DIGITE UM VEÍCULO PARA SER INSERIDO EM UMA DAS LISTAS:
     \nSUV = ${carrosSUV.join(" - ")}
     \nSEDAN = ${carrosSedan.join(" - ")}
-    \nHATCH = ${carrosHatch.join(" - ")}.`);  
+    \nHATCH = ${carrosHatch.join(" - ")}.`);
+
+    const tipo2 = prompt(`DIGITE O TIPO DE VEÍCULO QUE DESEJA INSERIR: \n-SUV
+    \n-SEDAN
+    \n-HATCH.`).toUpperCase();
+
     const adicione3 = prompt(`DIGITE UM VEÍCULO PARA SER INSERIDO EM UMA DAS LISTAS:
     \nSUV = ${carrosSUV.join(" - ")}
     \nSEDAN = ${carrosSedan.join(" - ")}
-    \nHATCH = ${carrosHatch.join(" - ")}.`);  
+    \nHATCH = ${carrosHatch.join(" - ")}.`);
 
-    const tipo = prompt(`DIGITE O TIPO DE VEÍCULO QUE DESEJA INSERIR: \n-SUV
+    const tipo3 = prompt(`DIGITE O TIPO DE VEÍCULO QUE DESEJA INSERIR: \n-SUV
     \n-SEDAN
-    \n-HATCH.`).toLocaleUpperCase;
+    \n-HATCH.`).toUpperCase();
 
     //PROCESSAMENTO
 
-    let listaCarros = [adicione1, adicione2, adicione3];
 
-    if(tipo == "SUV"){
-        carrosSUV.concat(listaCarros);
-        document.write(`Lista Final: ${carrosSUV}`)
+    if (tipo1 == "SUV") {
+        carrosSUV.push(adicione1);
     }
 
-    else if(tipo == "SEDAN"){
-        carrosSedan.concat(listaCarros);
-        document.write(`Lista Final: ${carrosSedan}`)
+    else if (tipo1 == "SEDAN") {
+        carrosSedan.push(adicione1);
     }
 
-    else if(tipo == "HATCH"){
-        carrosHatch.concat(listaCarros);
-        document.write(`Lista Final: ${carrosHatch}`)
+    else if (tipo1 == "HATCH") {
+        carrosHatch.push(adicione1);
     }
 
-    else{
-        alert(`VALOR INVÁLIDO`);
+    else {
+        alert("VALOR INSERIDO EM TIPO INCORRETO.");
     }
 
-    // Eu estava adicionando a lista final, contudo acho que há algo de errado com a entrada.
 
-    //SAÍDA
+    if (tipo2 == "SUV") {
+        carrosSUV.push(adicione2);
+    }
+
+    else if (tipo2 == "SEDAN") {
+        carrosSedan.push(adicione2);
+    }
+
+    else if (tipo2 == "HATCH") {
+        carrosHatch.push(adicione2);
+    }
+
+    else {
+        alert("VALOR INSERIDO EM TIPO INCORRETO.")
+    }
+
+
+
+    if (tipo3 == "SUV") {
+        carrosSUV.push(adicione3);
+    }
+
+    else if (tipo3 == "SEDAN") {
+        carrosSedan.push(adicione3);
+    }
+
+    else if (tipo3 == "HATCH") {
+        carrosHatch.push(adicione3);
+    }
+
+    else {
+        alert("VALOR INSERIDO EM TIPO INCORRETO.")
+    }
+
+    document.write(`SUV: <br> - ${carrosSUV.join("<br> - ")}<br>
+    SEDAN: <br> - ${carrosSedan.join("<br> - ")}<br>
+    HATCH: <br> - ${carrosHatch.join("<br> - ")}`);
+
+
 
 </script>
