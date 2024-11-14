@@ -14,9 +14,51 @@
 
     //ENTRADA
 
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+
+    const adicione1 = prompt(`DIGITE UM VEÍCULO PARA SER INSERIDO EM UMA DAS LISTAS:
+    \nSUV = ${carrosSUV.join(" - ")}
+    \nSEDAN = ${carrosSedan.join(" - ")}
+    \nHATCH = ${carrosHatch.join(" - ")}.`);  
+    const adicione2 = prompt(`DIGITE UM VEÍCULO PARA SER INSERIDO EM UMA DAS LISTAS:
+    \nSUV = ${carrosSUV.join(" - ")}
+    \nSEDAN = ${carrosSedan.join(" - ")}
+    \nHATCH = ${carrosHatch.join(" - ")}.`);  
+    const adicione3 = prompt(`DIGITE UM VEÍCULO PARA SER INSERIDO EM UMA DAS LISTAS:
+    \nSUV = ${carrosSUV.join(" - ")}
+    \nSEDAN = ${carrosSedan.join(" - ")}
+    \nHATCH = ${carrosHatch.join(" - ")}.`);  
+
+    const tipo = prompt(`DIGITE O TIPO DE VEÍCULO QUE DESEJA INSERIR: \n-SUV
+    \n-SEDAN
+    \n-HATCH.`).toLocaleUpperCase;
 
     //PROCESSAMENTO
 
+    let listaCarros = [adicione1, adicione2, adicione3];
+
+    if(tipo == "SUV"){
+        carrosSUV.concat(listaCarros);
+        document.write(`Lista Final: ${carrosSUV}`)
+    }
+
+    else if(tipo == "SEDAN"){
+        carrosSedan.concat(listaCarros);
+        document.write(`Lista Final: ${carrosSedan}`)
+    }
+
+    else if(tipo == "HATCH"){
+        carrosHatch.concat(listaCarros);
+        document.write(`Lista Final: ${carrosHatch}`)
+    }
+
+    else{
+        alert(`VALOR INVÁLIDO`);
+    }
+
+    // Eu estava adicionando a lista final, contudo acho que há algo de errado com a entrada.
 
     //SAÍDA
 

@@ -10,10 +10,23 @@
 
     //ENTRADA
 
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    const usuarioRemover = prompt(`Digite um carro que você deseja REMOVER da lista:\n-${carrosSUV.join("\n-")}`);
 
     //PROCESSAMENTO
 
+    const posicao = carrosSUV.indexOf(usuarioRemover);
+    alert(`A lista antiga de carros é: ${carrosSUV.join(" - ")}`);
+
+    if(posicao != -1){
+        alert(`O carro adicionado já está na lista, tente novamente.`);
+    }
+    else{
+        carrosSUV.push(usuarioRemover);
+    }
 
     //SAÍDA
+
+    alert(`A nova lista de carros é: ${carrosSUV.join(" - ")}`);
 
 </script>
